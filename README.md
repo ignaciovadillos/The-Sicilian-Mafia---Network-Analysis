@@ -1,175 +1,167 @@
 # Sicilian Mafia Network Disruption Analysis
 
-This project studies the Montagna criminal network by combining:
+This project analyzes the Montagna criminal network as an organization of relationships rather than a list of individuals. It merges phone calls and in-person meetings into one interaction graph, measures the structure of the network before intervention, simulates disruption by removing arrested actors, and identifies both the most important surviving targets and the arrested actors with the highest intelligence value.
 
-- `data/raw/Montagna_Meetings_Edgelist.csv`: in-person meetings
-- `data/raw/Montagna_Phone_Calls_Edgelist.csv`: phone-call ties
-- `data/raw/Montagna_Roles.csv`: node roles, relationships, and legal notes
+The main analytical product is [src/full_network_analysis.ipynb](/home/ivadi/projects/sicilian_mafia/src/full_network_analysis.ipynb), which is written as a report-ready notebook rather than an exploratory scratchpad.
 
-The project focus has shifted from comparing channels separately to evaluating the organization before and after disruption. Some actors in the metadata are marked as `arrested`, `house arrest`, or `in jail`, which lets us model how the network changes once those members are removed.
+## Key Findings
 
-## Main Goal
+- The full merged network contains `145` nodes and `583` directed ties, with a `135`-node largest weak component.
+- Removing the `41` actors flagged as arrested reduces the network to `104` nodes and `122` directed ties.
+- Fragmentation rises sharply: weak components jump from `6` to `68`, and isolates rise from `1` to `55`.
+- `N18`, `N47`, and `N68` dominate the original core of the organization.
+- `N11` and `N3` emerge as the clearest future-arrest priorities among surviving actors.
+- `N18`, `N47`, and `N68` are the most valuable interrogation priorities among arrested actors, while `N12` and `N25` are the strongest cooperation leads to the highest-priority survivors.
 
-Build one complete interaction network, measure the structure of the organization before disruption, simulate its current status after arrests, and identify which arrested actors should be prioritized for interrogation in order to reach the most important members still in the network.
+## Project Question
 
-## Data Preparation
+The project is built around one policing question:
 
-Before analysis, the notebooks should produce a clean node table with:
+How much did the arrests damage the organization, and where should investigators focus next if the goal is to keep fragmenting the surviving network?
 
-- `family_role`: extracted from the `Role` field
-- `family`: extracted from quoted family names in `Role`
-- `arrested`: `1` when `Request` is `arrested`, ` arrested`, `house arrest`, or `in jail`; otherwise `0`
+To answer that, the notebook works through four steps:
 
-This enriched role table should then be joined to every graph view.
+1. build a complete network by merging calls and meetings
+2. describe the original structure of the organization
+3. remove arrested actors and measure the residual network
+4. rank the best future targets and the best cooperation candidates
 
-## Updated Project Questions
+## Data
 
-### 1. Build a complete network merging calls and meetings
+Raw inputs in this repository:
 
-Create a single network representation that includes all observed ties.
+- `data/raw/Montagna_Phone_Calls_Edgelist.csv`
+- `data/raw/Montagna_Meetings_Edgelist.csv`
+- `data/raw/Montagna_Roles.csv`
 
-Recommended approach:
-
-- load phone calls as a directed weighted graph
-- load meetings as an undirected weighted graph, then convert to reciprocal directed edges if a single directed network is needed
-- standardize node IDs across both sources
-- label edges by source: `call`, `meeting`, or `both`
-- aggregate weights for repeated contact
-
-Core output:
-
-- one merged network with all nodes and all observed interactions
-
-### 2. Previous status of the network
-
-Analyze the full organization before disruption, including all nodes.
-
-Questions to answer:
-
-- who are the most central actors in the full merged network?
-- which families dominate the network structurally?
-- which actors act as brokers between families or subgroups?
-- which leaders appear most important by rank and by network position?
-
-Suggested metrics:
-
-- degree / weighted degree
-- betweenness centrality
-- PageRank
-- connected components or communities
-
-### 3. Current status of the network after disruption
-
-Create a disrupted version of the network by removing actors with `arrested == 1`.
-
-Questions to answer:
-
-- how much does the network shrink after arrests?
-- which families lose the most members?
-- does the network fragment into smaller components?
-- which actors become newly central after the disruption?
-
-Suggested comparisons:
-
-- node and edge count before vs after disruption
-- number and size of connected components
-- giant component size
-- centrality ranking changes
-- family-level losses and survivors
-
-### 4. Prioritization of interrogation and future arrests
-
-Use the set of arrested actors to decide who should be offered a deal first if the goal is to expose the most important surviving members of the organization.
-
-This section should answer two separate questions.
-
-#### Which arrested actors should be prioritized for interrogation?
-
-Focus only on nodes with `arrested == 1`.
-
-Prioritization signals:
-
-- PageRank in the full network
-- betweenness centrality in the full network
-- role or rank in the family hierarchy: boss, deputy boss, executive, co-founder, member
-- number of surviving neighbors after disruption
-- cross-family reach
-
-Interpretation:
-
-- the best cooperation candidate is not only important, but also well-positioned to reveal active members and bridges that still matter after the disruption
-
-#### Which non-arrested actors should be prioritized in future arrests?
-
-Focus on nodes with `arrested == 0`.
-
-Prioritization signals:
-
-- high PageRank or weighted degree
-- leadership roles such as boss or co-founder
-- brokerage across communities or families
-- importance in the post-disruption network
-
-Interpretation:
-
-- this identifies the most valuable remaining targets after the initial wave of arrests
-
-### 5. Ego networks for the top 3 actors
-
-Build ego networks for the three most important actors in the merged network.
-
-These figures should make it easy to see:
-
-- direct contacts
-- family composition around each actor
-- whether each ego network is mostly internal or cross-family
-- whether the actor remains central after disruption
-
-## Recommended Workflow
-
-1. Clean `Role` into `family_role` and `family`, and derive `arrested`
-2. Build the merged calls + meetings network
-3. Compute baseline metrics on the full network
-4. Remove arrested actors and compute post-disruption metrics
-5. Rank arrested actors for interrogation value
-6. Rank non-arrested actors for future arrest priority
-7. Plot ego networks for the top 3 actors
-
-## Deliverables
-
-### Core outputs
-
-- merged network dataset
-- enriched node metadata with family and arrest status
-- baseline network summary
-- disrupted network summary
-- ranked table of arrested actors to interrogate
-- ranked table of surviving actors to prioritize for arrest
-- ego-network visualizations for the top 3 actors
-
-### Suggested files
+Processed inputs and derived tables:
 
 - `data/processed/roles.csv`
+- `data/processed/combined_edges.csv`
+- `data/processed/node_metrics_full.csv`
+- `data/processed/node_metrics_disrupted.csv`
+
+What the raw datasets represent:
+
+- `Montagna_Meetings_Edgelist.csv`: physical meetings observed through police stakeouts, with `101` nodes and `256` edges
+- `Montagna_Phone_Calls_Edgelist.csv`: phone-call relationships observed through police eavesdropping, with `100` nodes and `124` edges
+- `Montagna_Roles.csv`: role labels, links between suspects, and judge-request annotations such as arrested, in jail, or house arrest
+- The meetings and phone-call datasets share `47` nodes
+
+Historical context:
+
+The datasets come from court-derived material tied to the `Montagna Operation`, a major anti-mafia investigation centered on the `Mistretta` family and the `Batanesi` clan. The source material was derived from the pre-trial detention order issued by the Court of Messina's preliminary investigation judge on March 14, 2007. The investigation was concluded in `2007` by the Public Prosecutor's Office of Messina and conducted by the `R.O.S. (Reparto Operativo Speciale)` of the Carabinieri.
+
+Dataset source:
+
+- Zenodo record: https://zenodo.org/records/3938818#.YW4WLhxxWUl
+
+## Repository Structure
+
+```text
+.
+├── data/
+│   ├── raw/                  # original Montagna datasets
+│   └── processed/            # cleaned roles and graph-level outputs
+├── experiments/              # exploratory notebooks
+├── reports/
+│   ├── figures/              # exported network figures
+│   └── *.csv                 # story-ready summary tables
+├── src/
+│   ├── full_network_analysis.ipynb
+│   └── pipeline/roles.ipynb
+├── storytelling.md
+└── requirements.txt
+```
+
+What each part is for:
+
+- `src/` contains the core files needed to run the project.
+- `src/full_network_analysis.ipynb` is the main notebook where the full analysis happens.
+- `src/pipeline/roles.ipynb` is a preprocessing notebook used to clean and prepare part of the raw data before the main analysis.
+- `storytelling.md` is the narrative guide for the project. It gives structure to the storytelling and adds context for how to present the analysis.
+- `README.md` explains the overall project: the goal, the data, the method, the outputs, and how to reproduce the work.
+- `reports/figures/` contains `.png` versions of the plots, ready to reuse in slides, reports, or any other presentation format.
+- `reports/*.csv` contains report-style deliverables: summary tables and ranked outputs that could plausibly be handed over as the result of a real analysis using this dataset.
+
+## Method Overview
+
+The notebook follows a simple but defensible workflow:
+
+1. clean role metadata and derive an `arrested` flag
+2. convert meetings into reciprocal directed ties
+3. merge meetings and calls into one weighted directed graph
+4. compute baseline centrality and component metrics
+5. remove arrested actors to simulate disruption
+6. compare before/after cohesion
+7. rank surviving actors for future arrests
+8. rank arrested actors for interrogation and cooperation value
+
+Core metrics include:
+
+- degree and weighted degree
+- betweenness centrality
+- PageRank
+- weak-component membership and size
+- surviving-neighbor access
+- cross-family reach
+
+## Outputs
+
+Technical outputs:
+
 - `data/processed/combined_edges.csv`
 - `data/processed/node_metrics_full.csv`
 - `data/processed/node_metrics_disrupted.csv`
 - `reports/interrogation_priority.csv`
 - `reports/arrest_priority.csv`
 
-### Suggested figures
+Story-first outputs:
 
-- `reports/figures/combined_network_full.png`
-- `reports/figures/combined_network_disrupted.png`
-- `reports/figures/top3_ego_networks.png`
-- `reports/figures/family_disruption_summary.png`
+- `reports/network_disruption_scorecard.csv`
+- `reports/family_disruption_summary.csv`
+- `reports/future_arrest_priority_story.csv`
+- `reports/interrogation_priority_story.csv`
+- `reports/target_access_summary.csv`
 
-## Working Interpretation
+Figures:
 
-The final notebook should tell a coherent policing story:
+- `reports/figures/initial_network.png`
+- `reports/figures/top3_highlighted.png`
+- `reports/figures/top3_actors.png`
+- `reports/figures/arrests_network.png`
+- `reports/figures/disrupted_graph.png`
+- `reports/figures/disrupted_graph_most_wanted.png`
+- `reports/figures/target_intermediaries_network.png`
 
-- what the organization looked like before intervention
-- what remains after the arrested members are removed
-- which arrested actors are best positioned to reveal the surviving leadership
-- which surviving actors should be targeted next
+## Reproducing The Analysis
 
-That makes the project less about static centrality ranking and more about disruption, resilience, and intelligence value.
+Install the environment:
+
+```bash
+pip install -r requirements.txt
+```
+
+Then run the notebooks in this order:
+
+1. `src/pipeline/roles.ipynb`
+2. `src/full_network_analysis.ipynb`
+
+The main notebook is designed to work from either the repository root or the `src/` directory, and it writes figures and summary tables into `reports/` plus processed tables into `data/processed/`.
+
+## Narrative Framing
+
+The recommended story for presenting the project is:
+
+- the organization had a visible core before intervention
+- the crackdown hit that core hard and sharply increased fragmentation
+- the network survives only in fragments
+- those fragments are still legible enough to support the next phase of targeting
+
+For a fuller write-up and slide structure, see [storytelling.md](/home/ivadi/projects/sicilian_mafia/storytelling.md).
+
+## Limitations
+
+- Centrality measures indicate structural importance, not direct proof of command authority.
+- Removing arrested actors entirely is a useful disruption model, but it simplifies real residual influence.
+- Family labels and role labels are incomplete for some nodes, so subgroup interpretation should be cautious.

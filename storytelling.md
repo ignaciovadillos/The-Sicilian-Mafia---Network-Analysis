@@ -1,120 +1,101 @@
-# Storytelling Guide: The Sicilian Mafia Network
+# Storytelling Guide: Sicilian Mafia Network Disruption
 
-This document is the narrative backbone for the final report and presentation. It translates the network analysis into a coherent story about structure, disruption, resilience, and investigative value.
+This document is the narrative backbone for the notebook, report, and presentation. It turns the network analysis into a clear investigative story: what the organization looked like before intervention, how strongly the crackdown fractured it, and where investigative pressure should go next.
 
-It is written to support two goals at once:
+## Story In One Sentence
 
-- a written report with a clear analytical arc
-- a presentation with a strong storyline and memorable takeaways
+The Montagna network began as a concentrated criminal organization with a visible operational core; the arrests damaged that core heavily, but the remaining fragments still reveal both the next priority targets and the arrested actors most able to expose them.
 
-## Core Story In One Sentence
+## Executive Narrative
 
-The Montagna network was not just a collection of criminal contacts: it was a concentrated organizational structure, and although the arrests removed much of its original core, the surviving network still contains identifiable actors and pockets of cohesion that matter for the next phase of investigation.
+Open with the full organization, not the disruption. The merged network combines meetings and phone calls into one operational map of the group. In that intact structure, a few actors dominate the center and several families appear deeply embedded in the core.
 
-## Executive Summary Narrative
+Then shift to the intervention. Once the `41` arrested actors are removed, the network does not simply get smaller. It breaks apart. The largest weak component collapses, isolates multiply, and the surviving structure looks less like one organization and more like a set of fragments.
 
-The story begins with a full organization, not with isolated events. By merging meetings and phone calls into one network, we can see the criminal structure as an operational system: who sits at the center, who bridges groups, and which families appear most structurally exposed.
+The final move is the most important: fragmentation is not disappearance. Even after the crackdown, the residual network still contains identifiable actors, surviving components, and cooperation opportunities. That is what makes the project strategically useful rather than purely descriptive.
 
-That baseline matters because the disruption was substantial. A large share of the most central actors in the original network were arrested, especially within Batanesi and Mistretta. The intervention did not merely reduce the size of the network; it shattered its cohesion. The giant component collapses, isolates multiply, and the surviving network becomes much more fragmented.
+## Dataset Context
 
-But fragmentation is not the same as disappearance. Some actors remain important after disruption, especially those who still sit inside the largest surviving component or retain symbolic leadership value. This is why the analysis naturally leads to two operational questions: which arrested actors are best positioned to reveal the surviving structure, and which surviving actors should be prioritized next.
+The three datasets in this project come directly from court-derived criminal intelligence records. That provenance is worth stating early in any report or presentation, because it explains both the strength of the material and the sensitivity of the interpretation.
 
-The central finding is therefore double-edged:
+The source tables are:
 
-- the arrests were effective against the original core
-- the surviving structure is smaller but still interpretable, which makes follow-up targeting possible
+- `Meetings` dataset: physical meetings observed through police stakeouts, with `101` nodes and `256` edges
+- `Phone Calls` dataset: phone-call relationships observed through police eavesdropping, with `100` nodes and `124` edges
+- `Roles` dataset: role labels, relationships between suspects, and the judge's request or status annotations such as arrested, in jail, or house arrest
+- overlap between meetings and phone calls: `47` nodes appear in both interaction datasets
 
-## Main Message
+Useful framing:
 
-The network tells a before-and-after story.
+This is not synthetic data and not a generic social network. It is a court-derived view of criminal relationships observed through surveillance and judicial investigation.
 
-Before disruption, power was concentrated in a relatively connected structure dominated by a few central actors. After disruption, the organization loses scale, continuity, and brokerage capacity, but it does not become irrelevant. Instead, it becomes a fractured system in which a smaller number of surviving actors become easier to identify as the next key targets.
+## Historical Provenance
 
-## Story Arc
+The datasets were derived from the pre-trial detention order issued by the Court of Messina's preliminary investigation judge on March 14, 2007, near the end of the anti-mafia investigation commonly referred to as the `Montagna Operation`.
 
-Use this 5-part arc consistently in the report and presentation.
+That operation was concluded in `2007` by the Public Prosecutor's Office of Messina in Sicily and conducted by the Special Operations Unit of the Italian Police, the `R.O.S. (Reparto Operativo Speciale)` of the Carabinieri, which specializes in anti-mafia investigations.
 
-### 1. The Organization Before Intervention
+The investigation focused especially on two mafia groups, the `Mistretta` family and the `Batanesi` clan. Between `2003` and `2007`, these groups were found to have infiltrated several economic activities, which makes the network perspective especially relevant: the case is not just about individual suspects, but about organizational coordination.
 
-Open with the idea that the full network reveals the criminal organization in its most operational form.
+## Evidence Cheat Sheet
 
-Points to emphasize:
+Use these numbers consistently across the notebook, report, and slides.
 
-- the merged network contains `145` nodes and `583` directed ties
-- the full structure is dominated by a dense central core
-- the most central actors in the baseline network are `N18`, `N47`, `N68`, `N61`, and `N27`
-- these actors are not marginal members; they are structurally important, and several belong to families that later absorb heavy losses
+- Full merged network: `145` nodes, `583` directed ties
+- Largest weak component before disruption: `135` nodes
+- Arrested actors removed in the disruption scenario: `41`
+- Residual network: `104` nodes, `122` directed ties
+- Weak components: from `6` to `68`
+- Isolates: from `1` to `55`
+- Largest weak component after disruption: from `135` to `16`
 
-Suggested interpretation:
+## The Five-Act Story
 
-This was not a flat or random network. It had a center of gravity. Certain actors concentrated communication and brokerage, making the organization operationally dependent on a relatively small core.
+### 1. Rebuild The Organization Before Intervention
 
-### 2. The Intervention Hits The Core
+Lead with the idea that the network is an organization of relationships, not a list of suspects.
 
-The second act is the disruption itself.
+Key message:
 
-Key evidence:
+- the merged graph reveals the operational system in its intact form
+- the baseline network has a clear center of gravity
+- the top actors are not outliers by chance; they sit inside the structure that keeps the network cohesive
 
-- `41` actors are marked as arrested or otherwise removed
-- the surviving network falls to `104` nodes and `122` ties
-- weak components rise from `6` to `68`
-- isolates rise from `1` to `55`
-- the largest weak component collapses from `135` nodes to `16`
+### 2. Show Who Anchored The Original Core
 
-Suggested interpretation:
+Use the baseline ranking and ego-network visuals to introduce the main characters.
 
-The intervention did not just trim the periphery. It struck the structure where it mattered most. The comparison between the full network and the disrupted network shows a strong loss of organizational cohesion.
-
-This is an important storytelling moment: do not present the disruption as a technical metric change only. Present it as the collapse of a once-connected operational core.
-
-### 3. Some Families Were Hit Harder Than Others
-
-The third act focuses on family-level consequences.
-
-Strongest examples:
-
-- `Batanesi`: `17` total members, `13` arrested, `4` survivors
-- `Mistretta`: `9` total members, `6` arrested, `3` survivors
-
-Suggested interpretation:
-
-The disruption was not evenly distributed. Some families, especially Batanesi and Mistretta, appear disproportionately damaged. This matters because family-level losses help explain why the post-disruption network fragments so sharply.
-
-Suggested wording:
-
-The network after disruption is not just smaller; it is politically and organizationally rebalanced. Some groups lose much more of their internal capacity than others.
-
-### 4. Intelligence Value Now Matters As Much As Centrality
-
-This is where the story shifts from description to decision-making.
-
-The key question becomes:
-
-If the original core has been removed, who now creates the greatest investigative value?
-
-This leads to two distinct rankings.
-
-#### Interrogation Priority Among Arrested Actors
-
-Top five:
+Top actors in the intact network:
 
 - `N18`
 - `N47`
 - `N68`
 - `N61`
-- `N22`
+- `N27`
 
-Interpretation:
+Strong speaking line:
 
-These actors matter not only because they were central before disruption, but because they were positioned to connect to surviving members, bridge families, or reveal how the organization functioned when it was intact.
+This was not a flat organization. A relatively small core concentrated communication, brokerage, and family-level reach.
 
-This is the point to emphasize in the report:
+### 3. Show That The Intervention Hit The Core
 
-The best cooperation candidate is not simply the most important arrested person. It is the arrested person most likely to expose the surviving structure.
+This is the turning point of the story.
 
-#### Future Arrest Priority Among Surviving Actors
+Key message:
 
-Top five:
+- removing the arrested actors dramatically reduces ties and cohesion
+- the intervention does not just trim the edge of the network
+- it breaks the giant component and leaves many actors isolated
+
+Strong speaking line:
+
+The crackdown did not merely reduce the organization. It broke much of the connective tissue that made it operational.
+
+### 4. Show Who Matters Among The Survivors
+
+Once the original core is removed, the story becomes about the residual network.
+
+Top future-arrest priorities:
 
 - `N11`
 - `N3`
@@ -124,308 +105,137 @@ Top five:
 
 Interpretation:
 
-These actors are the most important remaining targets once the first wave of disruption has already taken place. They represent the surviving backbone of the reorganized network.
+- `N11` and `N3` are the clearest follow-up targets
+- the surviving network is smaller, so important remaining actors become easier to isolate
+- post-disruption importance matters as much as pre-disruption prominence
 
-### 5. The Organization Survives In Fragments
+### 5. Show Which Arrested Actors Can Expose The Remnants
 
-The final act should not overclaim. The analysis does not show a fully resilient organization, but it also does not show total collapse.
+This is where the analysis becomes operational.
 
-Suggested conclusion:
+Top interrogation priorities:
 
-The network survives in fragments. The original core is heavily damaged, yet the remaining actors still form interpretable pockets of structure. That means the organization is weakened, not erased.
+- `N18`
+- `N47`
+- `N68`
+- `N61`
+- `N22`
 
-This framing is strong because it is analytically honest and strategically useful.
+Best cooperation leads to the two highest-priority survivors:
 
-## Characters In The Story
+- `N12`
+- `N25`
 
-Treat the most central actors as characters in the narrative. This helps both the report and the slides feel concrete.
+Interpretation:
+
+- the best cooperation target is not simply the most important arrested actor
+- it is the arrested actor most likely to reveal active survivors, surviving bridges, or residual leadership
+
+## Family-Level Story
+
+The disruption is not evenly distributed across families. This is one of the clearest explanations for the sharp fragmentation after the crackdown.
+
+Most affected families:
+
+- `Batanesi`: `17` total members, `13` arrested, `4` survivors
+- `Mistretta`: `9` total members, `6` arrested, `3` survivors
+
+Useful framing:
+
+The network after disruption is not only smaller. It is reorganized unevenly, because some families lose much more of their internal capacity than others.
+
+## Character Notes
 
 ### N18
 
 - executive in `Mistretta`
 - highest PageRank in the full network
-- top interrogation target
+- top interrogation priority
 
 Narrative role:
 
-N18 represents the original core of the organization and the kind of actor whose removal weakens the network dramatically, but whose cooperation would still be highly valuable.
+Represents the original core and the kind of actor whose removal weakens the network, but whose cooperation still carries major intelligence value.
 
 ### N47
 
 - deputy boss in `Batanesi`
-- highest weighted degree in the full network among the top actors
-- second interrogation target
+- extremely high weighted degree
+- second interrogation priority
 
 Narrative role:
 
-N47 embodies brokerage and reach. This is the kind of actor whose position suggests access to both operational ties and family-level influence.
+Embodies reach and brokerage inside one of the most damaged families.
 
 ### N68
 
 - executive in `Batanesi`
-- central in the pre-disruption structure
-- third interrogation target
+- central in the full network
+- third interrogation priority
 
 Narrative role:
 
-N68 helps reinforce the finding that Batanesi was deeply embedded in the original core and heavily affected by the intervention.
+Reinforces that the crackdown struck deeply into the Batanesi core.
 
 ### N11
 
-- surviving actor
-- highest future arrest priority after disruption
+- boss of Cosa Nostra in Messina
+- highest future-arrest priority
 - highest PageRank in the disrupted network
 
 Narrative role:
 
-N11 is the clearest example of a surviving actor who becomes more important once the original core is removed.
-
-## Visual Storytelling Plan
-
-Use the visuals in this order.
-
-### 1. Full Network Plot
-
-Purpose:
-
-Show the original organization as a connected system with a visible center.
-
-Message:
-
-Before disruption, the network is concentrated enough that a central cluster dominates the overall structure.
-
-### 2. Full Network With Top Three Highlighted
-
-Purpose:
-
-Introduce the main protagonists of the network.
-
-Message:
-
-The original organization depends heavily on a few central actors.
-
-### 3. Network After Disruption
-
-Purpose:
-
-Show the magnitude of structural collapse.
-
-Message:
-
-The intervention breaks the giant component and creates a far more scattered landscape.
-
-### 4. Ego Networks For The Top Three Actors
-
-Purpose:
-
-Translate abstract centrality into local structure.
-
-Message:
-
-These actors were not central by accident. Their ego networks show dense local environments and multiple connections that help explain why they mattered.
-
-### 5. Ranking Tables
-
-Purpose:
-
-Convert network interpretation into operational decisions.
-
-Message:
-
-The analysis does not stop at description. It produces prioritization logic for interrogation and future arrests.
-
-## Recommended Report Structure
-
-Use the following structure for the report.
-
-### Title
-
-Network Disruption, Fragmentation, and Remaining Targets in the Montagna Sicilian Mafia Network
-
-### 1. Introduction
-
-Explain the problem in simple terms:
-
-- criminal organizations are not just made of individuals, but of relationships
-- a network perspective helps reveal structure, hierarchy, and vulnerability
-- the goal is to understand both the pre-disruption organization and the post-disruption residual network
-
-### 2. Data And Method
-
-Briefly describe:
-
-- source datasets
-- role cleaning and the `arrested` flag
-- merged network construction
-- baseline and post-disruption metrics
-- ranking logic for interrogation and future arrests
-
-### 3. The Full Network Before Disruption
-
-Focus on:
-
-- network scale
-- dominant actors
-- central cluster
-- family-level concentration
-
-### 4. The Network After Disruption
-
-Focus on:
-
-- shrinkage in nodes and ties
-- fragmentation
-- loss of the giant component
-- which actors remain central
-
-### 5. Investigative Prioritization
-
-Split into two subsections:
-
-- best arrested actors to interrogate
-- best surviving actors to arrest next
-
-### 6. Interpretation
-
-Pull the findings together:
-
-- the intervention was effective against the core
-- some families were hit much harder than others
-- the remaining network is fragmented but still actionable
-
-### 7. Conclusion
-
-End with the strategic takeaway:
-
-The network is no longer cohesive, but it remains legible enough to support the next stage of investigative targeting.
-
-## Recommended Presentation Structure
-
-Use this as a slide sequence.
-
-### Slide 1. Title
-
-The Sicilian Mafia Network Before And After Disruption
-
-Subtitle:
-
-How arrests fractured the organization and where investigators should focus next
-
-### Slide 2. Why A Network Lens?
-
-Main point:
-
-Criminal organizations operate through relationships, not just through individuals.
-
-### Slide 3. Data And Approach
-
-Show:
-
-- meetings
-- phone calls
-- roles and arrest status
-
-### Slide 4. Full Network
-
-Main point:
-
-The organization had a strong central core before disruption.
-
-### Slide 5. Who Dominated The Original Network?
-
-Highlight:
-
-- `N18`
-- `N47`
-- `N68`
-
-### Slide 6. What Happened After Arrests?
-
-Use the before/after metrics.
-
-Main point:
-
-The intervention sharply reduced cohesion and broke the giant component.
-
-### Slide 7. The Post-Disruption Network
-
-Show the disrupted network plot.
-
-Main point:
-
-The organization survives, but as fragments rather than a unified whole.
-
-### Slide 8. Which Arrested Actors Matter Most For Interrogation?
-
-Show the top interrogation ranking.
-
-Main point:
-
-The most valuable informants are those best positioned to reveal the surviving network.
-
-### Slide 9. Which Surviving Actors Matter Most Now?
-
-Show the future arrest ranking.
-
-Main point:
-
-A smaller network makes the remaining important actors easier to identify.
-
-### Slide 10. Final Takeaway
-
-Suggested closing sentence:
-
-The arrests broke the original center of gravity of the Montagna network, but the surviving fragments still reveal where investigative pressure should go next.
-
-## Phrases You Can Reuse
-
-These are useful report and presentation lines.
-
-### Opening
-
-This analysis treats the Montagna network as an organization of relationships rather than a list of suspects.
-
-### Transition To Disruption
-
-The key question is not only who mattered before the arrests, but what remains after the arrests.
-
-### On Fragmentation
-
-The disrupted network is not merely smaller; it is structurally broken into many weakly connected pieces.
-
-### On Interrogation Priority
-
-The best cooperation targets are the arrested actors most likely to illuminate the surviving structure.
-
-### On Future Arrest Priority
-
-Once the original core is removed, the most valuable remaining targets are those who become central in the residual network.
-
-### Final Line
-
-The intervention damaged the organization’s core, but the remaining fragments still preserve a map of where power and investigative value now sit.
-
-## Caveats To Keep In The Story
-
-- Many nodes are labeled `Unknown`, so family interpretation should be presented carefully.
-- Centrality is a structural measure, not direct proof of command authority.
-- The rankings are decision-support tools, not definitive operational truth.
-- The analysis models disruption by removing arrested actors entirely, which is analytically useful but may simplify real-world residual influence.
-
-## Writing Style Recommendation
-
-Aim for a tone that is:
-
-- analytical, but not dry
-- concrete, not abstract
-- strategic, not sensational
-
-Avoid framing the report as:
-
-- a generic technical notebook summary
-- a purely descriptive list of centrality scores
-- a dramatic crime story without analytical discipline
-
-The strongest version of this project is a strategic narrative:
-
-what the organization looked like, how intervention changed it, and what that implies for the next move.
+Shows how a surviving actor can become more strategically visible once the original core is removed.
+
+## Visual Sequence
+
+Present the visuals in this order.
+
+1. Full network figure
+2. Full network with top actors highlighted
+3. Ego networks for the top three actors
+4. Full network with arrested actors highlighted
+5. Residual network after disruption
+6. Residual network with top survivors highlighted
+7. Targets-and-cooperation-leads figure
+
+## Report Structure
+
+Use this structure for a written report.
+
+1. Introduction
+2. Data and network construction
+3. The organization before intervention
+4. The structural effect of arrests
+5. The surviving network and next targets
+6. Interrogation and cooperation priorities
+7. Strategic conclusion
+
+## Slide Structure
+
+Use this sequence for a presentation.
+
+1. Title and question
+2. Why a network lens matters
+3. Data sources and merged-network approach
+4. The intact organization
+5. The actors who anchored the core
+6. The crackdown and network collapse
+7. The surviving fragments
+8. Future-arrest priorities
+9. Interrogation and cooperation priorities
+10. Final takeaway
+
+## Reusable Lines
+
+- This analysis treats the Montagna network as an organization of relationships rather than a list of suspects.
+- The key question is not only who mattered before the arrests, but what remains after the arrests.
+- The residual network is not merely smaller; it is structurally broken into many weakly connected pieces.
+- The best cooperation targets are the arrested actors most likely to illuminate the surviving structure.
+- The crackdown damaged the organization’s core, but the remaining fragments still preserve a map of where investigative value now sits.
+
+## Caveats
+
+- Many nodes have limited or missing role information, so family-level interpretation should be cautious.
+- Centrality is evidence of structural importance, not direct proof of command authority.
+- The rankings are decision-support tools, not operational certainty.
+- Removing arrested actors entirely is analytically useful, but it may simplify real residual influence.

@@ -1,0 +1,42 @@
+Node,survivor_tie_count,survivor_tie_weight,connected_survivors,family_role,family
+N12,2,11.0,"N11, N3",member,Mistretta
+N25,1,5.0,N11,executive,Mistretta
+N68,1,2.0,N11,executive,Batanesi
+N18,1,1.0,N11,executive,Mistretta
+N85,1,1.0,N11,enterpreneur,Unknown
+N47,0,0.0,,deputy boss,Batanesi
+N61,0,0.0,,executive,Mistretta
+N27,0,0.0,,executive,Batanesi
+N22,0,0.0,,Pharmacist-member,Unknown
+N29,0,0.0,,enterpreneur,Unknown
+N45,0,0.0,,member,Batanesi
+N89,0,0.0,,member,Batanesi
+N48,0,0.0,,member,Batanesi
+N51,0,0.0,,member,Batanesi
+N50,0,0.0,,member,Batanesi
+N43,0,0.0,,intermediator,Unknown
+N19,0,0.0,,,
+N36,0,0.0,,,
+N70,0,0.0,,member,Batanesi
+N76,0,0.0,,enterpreneur,Unknown
+N23,0,0.0,,executive,Unknown
+N64,0,0.0,,enterpreneur,Unknown
+N66,0,0.0,,enterpreneur,Unknown
+N63,0,0.0,,enterpreneur,Unknown
+N67,0,0.0,,enterpreneur,Unknown
+N54,0,0.0,,enterpreneur,Unknown
+N80,0,0.0,,enterpreneur,Unknown
+N49,0,0.0,,member,Batanesi
+N33,0,0.0,,,
+N128,0,0.0,,enterpreneur,Unknown
+N77,0,0.0,,member,Mistretta
+N75,0,0.0,,member,Mistretta
+N21,0,0.0,,enterpreneur,Unknown
+N97,0,0.0,,member,Batanesi
+N62,0,0.0,,enterpreneur,Unknown
+N52,0,0.0,,enterpreneur,Unknown
+N96,0,0.0,,enterpreneur,Unknown
+N99,0,0.0,,,
+N151,0,0.0,,member,Batanesi
+N149,0,0.0,,Co-founder of,Batanesi
+N150,0,0.0,,,

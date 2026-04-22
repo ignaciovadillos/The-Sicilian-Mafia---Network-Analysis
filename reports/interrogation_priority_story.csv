@@ -1,0 +1,11 @@
+Node,family_role,family,surviving_neighbor_count,cross_family_reach,interrogation_priority_score
+N18,executive,Mistretta,23,16,0.9890243902439024
+N47,deputy boss,Batanesi,10,9,0.9701219512195122
+N68,executive,Batanesi,8,6,0.901829268292683
+N61,executive,Mistretta,7,8,0.8865853658536585
+N22,Pharmacist-member,Unknown,8,9,0.8798780487804878
+N27,executive,Batanesi,5,8,0.8439024390243903
+N12,member,Mistretta,11,6,0.8262195121951219
+N25,executive,Mistretta,8,7,0.7969512195121952
+N29,enterpreneur,Unknown,4,8,0.7951219512195122
+N45,member,Batanesi,5,5,0.7463414634146341
