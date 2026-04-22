@@ -1,261 +1,175 @@
-# Sicilian Mafia Network Analysis
+# Sicilian Mafia Network Disruption Analysis
 
-This project studies a criminal network using three complementary datasets:
+This project studies the Montagna criminal network by combining:
 
-- `data/Montagna_Meetings_Edgelist.csv`: in-person meeting links
-- `data/Montagna_Phone_Calls_Edgelist.csv`: directed phone-call links
-- `data/Montagna_Roles.csv`: node metadata, roles, relationships, and legal notes
+- `data/raw/Montagna_Meetings_Edgelist.csv`: in-person meetings
+- `data/raw/Montagna_Phone_Calls_Edgelist.csv`: phone-call ties
+- `data/raw/Montagna_Roles.csv`: node roles, relationships, and legal notes
 
-The goal is to understand what can be learned from each network in isolation, what changes when both channels are connected, and which actors or families appear most structurally important.
+The project focus has shifted from comparing channels separately to evaluating the organization before and after disruption. Some actors in the metadata are marked as `arrested`, `house arrest`, or `in jail`, which lets us model how the network changes once those members are removed.
 
-## Current Dataset Snapshot
+## Main Goal
 
-- Meetings network: 289 edges, 95 unique nodes
-- Phone-call network: 150 edges, 95 unique nodes
-- Shared nodes between both networks: 46
-- Role records: 143 nodes
-- Role coverage is high: 94 of 95 nodes in each edge list have a matching metadata row
+Build one complete interaction network, measure the structure of the organization before disruption, simulate its current status after arrests, and identify which arrested actors should be prioritized for interrogation in order to reach the most important members still in the network.
 
-This is enough to build:
+## Data Preparation
 
-- a meeting network
-- a call network
-- a merged multi-channel network
-- role- and family-level summaries
-- police-style prioritisation metrics such as centrality, PageRank, and disruption impact
+Before analysis, the notebooks should produce a clean node table with:
 
-## Project Questions
+- `family_role`: extracted from the `Role` field
+- `family`: extracted from quoted family names in `Role`
+- `arrested`: `1` when `Request` is `arrested`, ` arrested`, `house arrest`, or `in jail`; otherwise `0`
 
-### 1. Explore Graphs in Isolation
+This enriched role table should then be joined to every graph view.
 
-We first analyze the two interaction channels separately to understand what each one reveals.
+## Updated Project Questions
 
-#### Meetings graph
+### 1. Build a complete network merging calls and meetings
 
-Questions:
+Create a single network representation that includes all observed ties.
 
-- Which actors are most central in face-to-face meetings?
-- Which families appear clustered together in meetings?
-- Do bosses, executives, entrepreneurs, or intermediaries occupy different structural positions?
+Recommended approach:
 
-Planned analyses:
+- load phone calls as a directed weighted graph
+- load meetings as an undirected weighted graph, then convert to reciprocal directed edges if a single directed network is needed
+- standardize node IDs across both sources
+- label edges by source: `call`, `meeting`, or `both`
+- aggregate weights for repeated contact
 
-- Build an undirected weighted meetings graph
-- Join role metadata to node IDs
-- Extract families from the `Role` field
-- Compute degree, weighted degree, betweenness, closeness, and connected components
-- Visualize the graph colored by family and/or role
-- Produce a ranked table of the top meeting brokers
+Core output:
 
-#### Calls graph
+- one merged network with all nodes and all observed interactions
 
-Questions:
+### 2. Previous status of the network
 
-- Who is receiving and initiating the most contact?
-- Which actors dominate the call network even if they are less visible in meetings?
-- Is the phone network more centralized than the meeting network?
+Analyze the full organization before disruption, including all nodes.
 
-Planned analyses:
+Questions to answer:
 
-- Build a directed weighted calls graph
-- Compute in-degree, out-degree, weighted degree, PageRank, and betweenness
-- Compare central actors in calls vs meetings
-- Visualize the directed network and highlight the most influential phone nodes
+- who are the most central actors in the full merged network?
+- which families dominate the network structurally?
+- which actors act as brokers between families or subgroups?
+- which leaders appear most important by rank and by network position?
 
-#### What is possible from this dataset?
+Suggested metrics:
 
-From the available data, we should be able to infer:
+- degree / weighted degree
+- betweenness centrality
+- PageRank
+- connected components or communities
 
-- likely brokers and coordinators
-- high-status or high-visibility actors
-- families with the strongest structural presence
-- nodes that connect otherwise separate subgroups
-- differences between physical coordination and phone coordination
+### 3. Current status of the network after disruption
 
-What we cannot infer reliably:
+Create a disrupted version of the network by removing actors with `arrested == 1`.
 
-- exact chronology of events, because there is no time dimension
-- causality or command authority from network structure alone
-- full criminal responsibility without external evidence
+Questions to answer:
 
-## 2. Connect Meetings and Calls Into One Interconnected Network
+- how much does the network shrink after arrests?
+- which families lose the most members?
+- does the network fragment into smaller components?
+- which actors become newly central after the disruption?
 
-The second workstream is to merge both channels into a single representation of contact.
+Suggested comparisons:
 
-### Main objective
+- node and edge count before vs after disruption
+- number and size of connected components
+- giant component size
+- centrality ranking changes
+- family-level losses and survivors
 
-Understand who was in contact with whom across all observable interaction types.
+### 4. Prioritization of interrogation and future arrests
 
-### Merge strategy
+Use the set of arrested actors to decide who should be offered a deal first if the goal is to expose the most important surviving members of the organization.
 
-- Standardize node IDs across both edge lists
-- Preserve the phone graph as directed
-- Add meetings as reciprocal directed edges or keep a parallel undirected representation for robustness checks
-- Track edge provenance with labels such as `meeting`, `call`, or `both`
-- Build a combined weighted graph where stronger repeated contact has more influence
+This section should answer two separate questions.
 
-### Key outputs
+#### Which arrested actors should be prioritized for interrogation?
 
-- overlap summary: who appears in both networks, only meetings, or only calls
-- combined network visualization
-- family-to-family interaction summary
-- node table with metrics from all three views: meetings, calls, combined
+Focus only on nodes with `arrested == 1`.
 
-### Recommended comparisons
+Prioritization signals:
 
-- actors who are central in both graphs
-- actors who are central only in calls
-- actors who are central only in meetings
-- families whose importance changes after the merge
-
-## 3. Police-Oriented Questions to Answer
-
-These are the core analytic questions the notebook must answer clearly.
-
-### Who is the critical node to interrogate in order to obtain the most information?
-
-Primary metric:
-
-- betweenness centrality on the combined graph
-
-Support metrics:
-
-- bridging score between families or communities
-- change in connectivity after removing the node
-- number of unique neighbors across both channels
+- PageRank in the full network
+- betweenness centrality in the full network
+- role or rank in the family hierarchy: boss, deputy boss, executive, co-founder, member
+- number of surviving neighbors after disruption
+- cross-family reach
 
 Interpretation:
 
-- this is the best candidate broker or connector, not automatically the top boss
+- the best cooperation candidate is not only important, but also well-positioned to reveal active members and bridges that still matter after the disruption
 
-### Who is the main responsible for this network?
+#### Which non-arrested actors should be prioritized in future arrests?
 
-Primary metric:
+Focus on nodes with `arrested == 0`.
 
-- weighted PageRank on the combined graph
+Prioritization signals:
 
-Support metrics:
-
-- weighted in-degree
-- eigenvector-style influence
-- consistency across meetings and calls
-
-Interpretation:
-
-- this identifies the actor sitting at the center of influence and repeated contact, the person with whom investigators would have zero negotiation
-
-### What family was the most involved in the business?
-
-Primary measures:
-
-- total family-level weighted degree
-- total family-level PageRank
-- number of family members present in the network
-- share of cross-family contacts
+- high PageRank or weighted degree
+- leadership roles such as boss or co-founder
+- brokerage across communities or families
+- importance in the post-disruption network
 
 Interpretation:
 
-- this should distinguish between the largest visible family and the most structurally involved family
+- this identifies the most valuable remaining targets after the initial wave of arrests
 
-### Early working hypothesis from the current data
+### 5. Ego networks for the top 3 actors
 
-This should be verified in the final notebook, but the current exploration suggests:
+Build ego networks for the three most important actors in the merged network.
 
-- `N18` is a strong candidate for the most critical individual overall
-- `N47` is also highly influential, especially by contact volume
-- the `Batanesi` and `Mistretta` families are likely to dominate the combined network
+These figures should make it easy to see:
 
-## 4. Ego networks for the top 3 actors
+- direct contacts
+- family composition around each actor
+- whether each ego network is mostly internal or cross-family
+- whether the actor remains central after disruption
 
-Create small subgraphs centered on the three most important actors.
+## Recommended Workflow
 
-Relevance:
+1. Clean `Role` into `family_role` and `family`, and derive `arrested`
+2. Build the merged calls + meetings network
+3. Compute baseline metrics on the full network
+4. Remove arrested actors and compute post-disruption metrics
+5. Rank arrested actors for interrogation value
+6. Rank non-arrested actors for future arrest priority
+7. Plot ego networks for the top 3 actors
 
-- these figures are easier to read than the full network
-- they are excellent slide material for storytelling
+## Deliverables
 
-## 5. Deliverables
+### Core outputs
 
-### Core deliverables
+- merged network dataset
+- enriched node metadata with family and arrest status
+- baseline network summary
+- disrupted network summary
+- ranked table of arrested actors to interrogate
+- ranked table of surviving actors to prioritize for arrest
+- ego-network visualizations for the top 3 actors
 
-- A clean notebook that answers all project questions end to end
-- Presentation-ready `.png` figures
-- A short written conclusion summarizing the main findings
+### Suggested files
 
-### Recommended notebook scope
+- `data/processed/roles.csv`
+- `data/processed/combined_edges.csv`
+- `data/processed/node_metrics_full.csv`
+- `data/processed/node_metrics_disrupted.csv`
+- `reports/interrogation_priority.csv`
+- `reports/arrest_priority.csv`
 
-Suggested notebook:
+### Suggested figures
 
-- `experiments/mafia_network_analysis.ipynb`
+- `reports/figures/combined_network_full.png`
+- `reports/figures/combined_network_disrupted.png`
+- `reports/figures/top3_ego_networks.png`
+- `reports/figures/family_disruption_summary.png`
 
-Recommended notebook sections:
+## Working Interpretation
 
-1. Data loading and cleaning
-2. Roles and family extraction
-3. Meetings graph analysis
-4. Calls graph analysis
-5. Combined network construction
-6. Police questions and answers
-7. Extra analysis
-8. Final conclusions
+The final notebook should tell a coherent policing story:
 
-### Recommended figure outputs
+- what the organization looked like before intervention
+- what remains after the arrested members are removed
+- which arrested actors are best positioned to reveal the surviving leadership
+- which surviving actors should be targeted next
 
-Store in `reports/figures/`:
-
-- `meetings_network_by_family.png`
-- `calls_network_top_actors.png`
-- `combined_network.png`
-- `family_contact_heatmap.png`
-- `top_actors_ego_networks.png`
-- `network_disruption_simulation.png`
-
-### Optional tabular outputs
-
-Store in `reports/` or `data/processed/`:
-
-- `node_metrics.csv`
-- `family_metrics.csv`
-- `combined_edges_labeled.csv`
-
-## Execution Plan
-
-### Phase 1. Prepare and validate data
-
-- clean both edge lists
-- standardize node IDs
-- parse roles and families
-- document assumptions
-
-### Phase 2. Analyze each graph in isolation
-
-- meetings graph metrics and plots
-- calls graph metrics and plots
-- comparison table across modalities
-
-### Phase 3. Build the interconnected network
-
-- merge edges
-- compute combined metrics
-- label nodes by role and family
-
-### Phase 4. Answer investigation questions
-
-- identify the best interrogation target
-- identify the top influence target by PageRank
-- identify the most involved family
-
-### Phase 5. Package presentation outputs
-
-- export clean figures
-- polish notebook narrative
-- summarize findings in plain language
-
-## Success Criteria
-
-The project is complete when:
-
-- the notebook can be run from top to bottom without manual fixes
-- every police-style question has a direct answer supported by a metric and a figure
-- the final figures are readable in slides
-- the conclusions clearly separate evidence from interpretation
+That makes the project less about static centrality ranking and more about disruption, resilience, and intelligence value.

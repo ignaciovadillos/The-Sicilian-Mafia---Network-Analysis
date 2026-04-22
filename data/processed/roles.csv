@@ -1,144 +1,144 @@
-,Node,Role,Relationship,Request,family_role,family,arrested
-0,N0,cooperating witness,,,cooperating witness,Unknown,0
-1,N1,,conversation with 0,,,,0
-2,N2,boss family ''Barcellona Pozzo di Gotto'',,,boss,Barcellona Pozzo di Gotto,0
-3,N3,boss family ''Caltagirone'',,,boss,Caltagirone,0
-4,N4,enterpreneur,,,enterpreneur,Unknown,0
-5,N5,,sighted with 11 12 and 13,,,,0
-6,N6,,sighted with 3 4 5 7 and 8,,,,0
-7,N7,,sighted with 3 4 5 6 7 and 8,,,,0
-8,N8,,sighted with 3 4 5 6 and 7,,,,0
-9,N9,,sighted with 3 5 6 7 4 and 8,,,,0
-10,N10,enterpreneur,,,enterpreneur,Unknown,0
-11,N11,boss Cosa Nostra in Messina,,,boss Cosa Nostra in Messina,Unknown,0
-12,N12,member family ''Mistretta'',,arrested,member,Mistretta,1
-13,N13,enterpreneur,nephew of 11,,enterpreneur,Unknown,0
-14,N14,boss family ''Mazzaroti'',,arrest request denied,boss,Mazzaroti,0
-15,N16,boss family ''Brancaccio'',,,boss,Brancaccio,0
-16,N17,,tapped with 16,,,,0
-17,N18,executive family ''Mistretta'',,arrested,executive,Mistretta,1
-18,N19,,external partnership,arrested,,,1
-19,N20,,,fugitive,,,0
-20,N21,enterpreneur,,arrested,enterpreneur,Unknown,1
-21,N22,Pharmacist-member,,arrested,Pharmacist-member,Unknown,1
-22,N23,executive family,,arrested,executive,Unknown,1
-23,N24,,external partnership,,,,0
-24,N25,executive family ''Mistretta'',,arrested,executive,Mistretta,1
-25,N26,member of family ''San Mauro Castelverde'',,,member of,San Mauro Castelverde,0
-26,N27,executive family ''Batanesi'',,arrested,executive,Batanesi,1
-27,N28,,sighted with 11 13 and 5,,,,0
-28,N29,enterpreneur,,arrested,enterpreneur,Unknown,1
-29,N30,,father of 30,,,,0
-30,N31,enterpreneur,,,enterpreneur,Unknown,0
-31,N32,member family ''Mistretta'',,,member,Mistretta,0
-32,N33,,external partnership,arrested,,,1
-33,N34,,tapped with 18,,,,0
-34,N36,,aiding and abetting of a fugitive,arrested,,,1
-35,N39,executive family ''Batanesi'',,,executive,Batanesi,0
-36,N40,member family ''Mazzaroti'',,,member,Mazzaroti,0
-37,N41,member family ''Mazzaroti'',,,member,Mazzaroti,0
-38,N42,boss family ''Tortorici'',,,boss,Tortorici,0
-39,N43,intermediator,,arrested,intermediator,Unknown,1
-40,N45,member family ''Batanesi'',,arrested,member,Batanesi,1
-41,N46,boss family ''Tortorici'',,,boss,Tortorici,0
-42,N47,deputy boss family ''Batanesi'',,arrested,deputy boss,Batanesi,1
-43,N48,member family ''Batanesi'',,arrested,member,Batanesi,1
-44,N49,member family ''Batanesi'',,house arrest,member,Batanesi,1
-45,N50,member family ''Batanesi'',,arrested,member,Batanesi,1
-46,N51,member family ''Batanesi'',,arrested,member,Batanesi,1
-47,N52,enterpreneur,,arrested,enterpreneur,Unknown,1
-48,N54,enterpreneur,,arrested,enterpreneur,Unknown,1
-49,N55,member family ''Barcellona Pozzo di Gotto'',,,member,Barcellona Pozzo di Gotto,0
-50,N56,,wife of an inmate,arrest request denied,,,0
-51,N57,,daughter of an inmate,uninvolved,,,0
-52,N59,enterpreneur,,,enterpreneur,Unknown,0
-53,N60,,brother of 59,,,,0
-54,N61,executive family ''Mistretta'',,arrested,executive,Mistretta,1
-55,N62,enterpreneur,,arrested,enterpreneur,Unknown,1
-56,N63,enterpreneur,,arrested,enterpreneur,Unknown,1
-57,N64,enterpreneur,,arrested,enterpreneur,Unknown,1
-58,N65,enterpreneur,,,enterpreneur,Unknown,0
-59,N66,enterpreneur,,arrested,enterpreneur,Unknown,1
-60,N67,enterpreneur,,arrested,enterpreneur,Unknown,1
-61,N68,executive family ''Batanesi'',,arrested,executive,Batanesi,1
-62,N69,enterpreneur,,,enterpreneur,Unknown,0
-63,N70,member family ''Batanesi'',,arrested,member,Batanesi,1
-64,N71,enterpreneur,,,enterpreneur,Unknown,0
-65,N72,construction worker,,lack of evidence,construction worker,Unknown,0
-66,N73,,mother of 74 and wife of 22,,,,0
-67,N74,,son of 22,,,,0
-68,N75,member family ''Mistretta'',,arrested,member,Mistretta,1
-69,N76,enterpreneur,external partnership,arrested,enterpreneur,Unknown,1
-70,N77,member family ''Mistretta'',,arrested,member,Mistretta,1
-71,N78,,sighted with 22 and 18,,,,0
-72,N79,enterpreneur,external partnership,,enterpreneur,Unknown,0
-73,N80,enterpreneur,,arrested,enterpreneur,Unknown,1
-74,N81,,sighted with 80 and 82,,,,0
-75,N82,,sighted with 80 and 81,,,,0
-76,N83,,sighted with 15 and 79,,,,0
-77,N84,enterpreneur,external partnership,,enterpreneur,Unknown,0
-78,N85,enterpreneur,external partnership,arrested,enterpreneur,Unknown,1
-79,N86,enterpreneur,sighted with 87,,enterpreneur,Unknown,0
-80,N87,enterpreneur,sighted with 85,,enterpreneur,Unknown,0
-81,N88,,sighted with 25 and 26,,,,0
-82,N89,member family ''Batanesi'',,arrested,member,Batanesi,1
-83,N90,member family ''Batanesi'',,,member,Batanesi,0
-84,N91,car electrician,in contact with 36,,car electrician,Unknown,0
-85,N92,lawyer,in contact with 91 and 36,,lawyer,Unknown,0
-86,N93,,sighted with various members of families,,,,0
-87,N94,,sighted with 89 and 45,,,,0
-88,N95,member family ''Batanesi'',,,member,Batanesi,0
-89,N96,enterpreneur,,arrested,enterpreneur,Unknown,1
-90,N97,member family ''Batanesi'',,arrested,member,Batanesi,1
-91,N98,,,arrest request denied,,,0
-92,N99,,external partnership, arrested,,,1
-93,N100,farmer,external partnership,,farmer,Unknown,0
-94,N101,,phone tapped with 14,,,,0
-95,N102,,,arrest request denied,,,0
-96,N103,,phone tapping with 18,,,,0
-97,N104,enterpreneur,,,enterpreneur,Unknown,0
-98,N105,land owner,in contact with 37,,land owner,Unknown,0
-99,N106,,phone tapping with 107,,,,0
-100,N107,bar owner,phone tapped with 106,,bar owner,Unknown,0
-101,N108,walking fishmonger,phone tapped with 18,,walking fishmonger,Unknown,0
-102,N109,on-existent enterpreneur created during a scam,,,on-existent enterpreneur created during a scam,Unknown,0
-103,N110,,external partnership,,,,0
-104,N111,,phone tapping with 109,,,,0
-105,N112,,external partnership,,,,0
-106,N113,,external partnership,,,,0
-107,N114,road haulier,external partnership,,road haulier,Unknown,0
-108,N115,road haulier,external partnership,,road haulier,Unknown,0
-109,N116,accountant employee of 113,accountant employee of 113,,accountant employee of 113,Unknown,0
-110,N117,,phone tapping with 37,,,,0
-111,N118,,external partnership,,,,0
-112,N119,,nominee owner of the phone number used by 15,,,,0
-113,N121,,nominee owner of the phone number used by 147,,,,0
-114,N123,,Common-law wife of 47,,,,0
-115,N124,,phone tapping with various members,,,,0
-116,N125,member family ''Batanesi'',,,member,Batanesi,0
-117,N126,,sighted and phone tapped several times,,,,0
-118,N127,,phone tapped with 37,,,,0
-119,N128,enterpreneur,,arrested,enterpreneur,Unknown,1
-120,N129,,phone tapped with 37,,,,0
-121,N130,,phone tapped with 37,,,,0
-122,N131,,phone tapped with 37,,,,0
-123,N132,,phone tapped with 18,,,,0
-124,N133,City employee,phone tapped with 37,,City employee,Unknown,0
-125,N134,,phone tapped with 37,,,,0
-126,N136,,common-law wife of 27,,,,0
-127,N137,enterpreneur,,,enterpreneur,Unknown,0
-128,N138,lawyer,in contact with 27,,lawyer,Unknown,0
-129,N139,enterpreneur,,,enterpreneur,Unknown,0
-130,N140,enterpreneur,,,enterpreneur,Unknown,0
-131,N143,member family ''Mistretta'',,,member,Mistretta,0
-132,N144,member family ''Mistretta'',,,member,Mistretta,0
-133,N145,,mother of 13,,,,0
-134,N146,,phone tapped with 18,,,,0
-135,N147,,phone tapped with 44,,,,0
-136,N148,,wife of 149,,,,0
-137,N149,Co-founder of family ''Batanesi'',,in jail,Co-founder of,Batanesi,1
-138,N150,,,in jail,,,1
-139,N151,member family ''Batanesi'',,arrested,member,Batanesi,1
-140,N152,,phone tapped with 15,,,,0
-141,N153,,sells a car to 34,,,,0
-142,N154,,,arrest request denied,,,0
+Node,Role,Relationship,Request,family_role,family,arrested
+N0,cooperating witness,,,cooperating witness,Unknown,0
+N1,,conversation with 0,,,,0
+N2,boss family ''Barcellona Pozzo di Gotto'',,,boss,Barcellona Pozzo di Gotto,0
+N3,boss family ''Caltagirone'',,,boss,Caltagirone,0
+N4,enterpreneur,,,enterpreneur,Unknown,0
+N5,,sighted with 11 12 and 13,,,,0
+N6,,sighted with 3 4 5 7 and 8,,,,0
+N7,,sighted with 3 4 5 6 7 and 8,,,,0
+N8,,sighted with 3 4 5 6 and 7,,,,0
+N9,,sighted with 3 5 6 7 4 and 8,,,,0
+N10,enterpreneur,,,enterpreneur,Unknown,0
+N11,boss Cosa Nostra in Messina,,,boss Cosa Nostra in Messina,Unknown,0
+N12,member family ''Mistretta'',,arrested,member,Mistretta,1
+N13,enterpreneur,nephew of 11,,enterpreneur,Unknown,0
+N14,boss family ''Mazzaroti'',,arrest request denied,boss,Mazzaroti,0
+N16,boss family ''Brancaccio'',,,boss,Brancaccio,0
+N17,,tapped with 16,,,,0
+N18,executive family ''Mistretta'',,arrested,executive,Mistretta,1
+N19,,external partnership,arrested,,,1
+N20,,,fugitive,,,0
+N21,enterpreneur,,arrested,enterpreneur,Unknown,1
+N22,Pharmacist-member,,arrested,Pharmacist-member,Unknown,1
+N23,executive family,,arrested,executive,Unknown,1
+N24,,external partnership,,,,0
+N25,executive family ''Mistretta'',,arrested,executive,Mistretta,1
+N26,member of family ''San Mauro Castelverde'',,,member of,San Mauro Castelverde,0
+N27,executive family ''Batanesi'',,arrested,executive,Batanesi,1
+N28,,sighted with 11 13 and 5,,,,0
+N29,enterpreneur,,arrested,enterpreneur,Unknown,1
+N30,,father of 30,,,,0
+N31,enterpreneur,,,enterpreneur,Unknown,0
+N32,member family ''Mistretta'',,,member,Mistretta,0
+N33,,external partnership,arrested,,,1
+N34,,tapped with 18,,,,0
+N36,,aiding and abetting of a fugitive,arrested,,,1
+N39,executive family ''Batanesi'',,,executive,Batanesi,0
+N40,member family ''Mazzaroti'',,,member,Mazzaroti,0
+N41,member family ''Mazzaroti'',,,member,Mazzaroti,0
+N42,boss family ''Tortorici'',,,boss,Tortorici,0
+N43,intermediator,,arrested,intermediator,Unknown,1
+N45,member family ''Batanesi'',,arrested,member,Batanesi,1
+N46,boss family ''Tortorici'',,,boss,Tortorici,0
+N47,deputy boss family ''Batanesi'',,arrested,deputy boss,Batanesi,1
+N48,member family ''Batanesi'',,arrested,member,Batanesi,1
+N49,member family ''Batanesi'',,house arrest,member,Batanesi,1
+N50,member family ''Batanesi'',,arrested,member,Batanesi,1
+N51,member family ''Batanesi'',,arrested,member,Batanesi,1
+N52,enterpreneur,,arrested,enterpreneur,Unknown,1
+N54,enterpreneur,,arrested,enterpreneur,Unknown,1
+N55,member family ''Barcellona Pozzo di Gotto'',,,member,Barcellona Pozzo di Gotto,0
+N56,,wife of an inmate,arrest request denied,,,0
+N57,,daughter of an inmate,uninvolved,,,0
+N59,enterpreneur,,,enterpreneur,Unknown,0
+N60,,brother of 59,,,,0
+N61,executive family ''Mistretta'',,arrested,executive,Mistretta,1
+N62,enterpreneur,,arrested,enterpreneur,Unknown,1
+N63,enterpreneur,,arrested,enterpreneur,Unknown,1
+N64,enterpreneur,,arrested,enterpreneur,Unknown,1
+N65,enterpreneur,,,enterpreneur,Unknown,0
+N66,enterpreneur,,arrested,enterpreneur,Unknown,1
+N67,enterpreneur,,arrested,enterpreneur,Unknown,1
+N68,executive family ''Batanesi'',,arrested,executive,Batanesi,1
+N69,enterpreneur,,,enterpreneur,Unknown,0
+N70,member family ''Batanesi'',,arrested,member,Batanesi,1
+N71,enterpreneur,,,enterpreneur,Unknown,0
+N72,construction worker,,lack of evidence,construction worker,Unknown,0
+N73,,mother of 74 and wife of 22,,,,0
+N74,,son of 22,,,,0
+N75,member family ''Mistretta'',,arrested,member,Mistretta,1
+N76,enterpreneur,external partnership,arrested,enterpreneur,Unknown,1
+N77,member family ''Mistretta'',,arrested,member,Mistretta,1
+N78,,sighted with 22 and 18,,,,0
+N79,enterpreneur,external partnership,,enterpreneur,Unknown,0
+N80,enterpreneur,,arrested,enterpreneur,Unknown,1
+N81,,sighted with 80 and 82,,,,0
+N82,,sighted with 80 and 81,,,,0
+N83,,sighted with 15 and 79,,,,0
+N84,enterpreneur,external partnership,,enterpreneur,Unknown,0
+N85,enterpreneur,external partnership,arrested,enterpreneur,Unknown,1
+N86,enterpreneur,sighted with 87,,enterpreneur,Unknown,0
+N87,enterpreneur,sighted with 85,,enterpreneur,Unknown,0
+N88,,sighted with 25 and 26,,,,0
+N89,member family ''Batanesi'',,arrested,member,Batanesi,1
+N90,member family ''Batanesi'',,,member,Batanesi,0
+N91,car electrician,in contact with 36,,car electrician,Unknown,0
+N92,lawyer,in contact with 91 and 36,,lawyer,Unknown,0
+N93,,sighted with various members of families,,,,0
+N94,,sighted with 89 and 45,,,,0
+N95,member family ''Batanesi'',,,member,Batanesi,0
+N96,enterpreneur,,arrested,enterpreneur,Unknown,1
+N97,member family ''Batanesi'',,arrested,member,Batanesi,1
+N98,,,arrest request denied,,,0
+N99,,external partnership, arrested,,,1
+N100,farmer,external partnership,,farmer,Unknown,0
+N101,,phone tapped with 14,,,,0
+N102,,,arrest request denied,,,0
+N103,,phone tapping with 18,,,,0
+N104,enterpreneur,,,enterpreneur,Unknown,0
+N105,land owner,in contact with 37,,land owner,Unknown,0
+N106,,phone tapping with 107,,,,0
+N107,bar owner,phone tapped with 106,,bar owner,Unknown,0
+N108,walking fishmonger,phone tapped with 18,,walking fishmonger,Unknown,0
+N109,on-existent enterpreneur created during a scam,,,on-existent enterpreneur created during a scam,Unknown,0
+N110,,external partnership,,,,0
+N111,,phone tapping with 109,,,,0
+N112,,external partnership,,,,0
+N113,,external partnership,,,,0
+N114,road haulier,external partnership,,road haulier,Unknown,0
+N115,road haulier,external partnership,,road haulier,Unknown,0
+N116,accountant employee of 113,accountant employee of 113,,accountant employee of 113,Unknown,0
+N117,,phone tapping with 37,,,,0
+N118,,external partnership,,,,0
+N119,,nominee owner of the phone number used by 15,,,,0
+N121,,nominee owner of the phone number used by 147,,,,0
+N123,,Common-law wife of 47,,,,0
+N124,,phone tapping with various members,,,,0
+N125,member family ''Batanesi'',,,member,Batanesi,0
+N126,,sighted and phone tapped several times,,,,0
+N127,,phone tapped with 37,,,,0
+N128,enterpreneur,,arrested,enterpreneur,Unknown,1
+N129,,phone tapped with 37,,,,0
+N130,,phone tapped with 37,,,,0
+N131,,phone tapped with 37,,,,0
+N132,,phone tapped with 18,,,,0
+N133,City employee,phone tapped with 37,,City employee,Unknown,0
+N134,,phone tapped with 37,,,,0
+N136,,common-law wife of 27,,,,0
+N137,enterpreneur,,,enterpreneur,Unknown,0
+N138,lawyer,in contact with 27,,lawyer,Unknown,0
+N139,enterpreneur,,,enterpreneur,Unknown,0
+N140,enterpreneur,,,enterpreneur,Unknown,0
+N143,member family ''Mistretta'',,,member,Mistretta,0
+N144,member family ''Mistretta'',,,member,Mistretta,0
+N145,,mother of 13,,,,0
+N146,,phone tapped with 18,,,,0
+N147,,phone tapped with 44,,,,0
+N148,,wife of 149,,,,0
+N149,Co-founder of family ''Batanesi'',,in jail,Co-founder of,Batanesi,1
+N150,,,in jail,,,1
+N151,member family ''Batanesi'',,arrested,member,Batanesi,1
+N152,,phone tapped with 15,,,,0
+N153,,sells a car to 34,,,,0
+N154,,,arrest request denied,,,0
