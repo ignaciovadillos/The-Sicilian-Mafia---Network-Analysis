@@ -1,0 +1,146 @@
+Node,degree,weighted_degree,in_strength,out_strength,pagerank,betweenness,weak_component,weak_component_size,Role,Relationship,Request,family_role,family,arrested,neighbor_count,surviving_neighbor_count,cross_family_reach,role_priority_score
+N18,40,85.0,74.0,71.0,0.054437228746179366,0.3055110398860399,1,135,executive family ''Mistretta'',,arrested,executive,Mistretta,1.0,40,23,16,3
+N47,28,103.0,86.0,99.0,0.04749105048753502,0.23857161357161358,1,135,deputy boss family ''Batanesi'',,arrested,deputy boss,Batanesi,1.0,27,10,9,4
+N68,25,54.0,56.0,48.0,0.03325845992166112,0.12495953120953122,1,135,executive family ''Batanesi'',,arrested,executive,Batanesi,1.0,25,8,6,3
+N61,18,33.0,29.0,29.0,0.03325479307204368,0.09586247086247086,1,135,executive family ''Mistretta'',,arrested,executive,Mistretta,1.0,18,7,8,3
+N27,19,55.0,54.0,54.0,0.032027028482504834,0.07753820253820254,1,135,executive family ''Batanesi'',,arrested,executive,Batanesi,1.0,19,5,8,3
+N22,17,45.0,47.0,40.0,0.030940416577069085,0.11468045843045843,1,135,Pharmacist-member,,arrested,Pharmacist-member,Unknown,1.0,17,8,9,2
+N29,16,46.0,44.0,46.0,0.029000351082462423,0.21197552447552448,1,135,enterpreneur,,arrested,enterpreneur,Unknown,1.0,16,4,8,1
+N12,16,35.0,36.0,35.0,0.027096682480973692,0.08019781144781148,1,135,member family ''Mistretta'',,arrested,member,Mistretta,1.0,16,11,6,2
+N45,14,49.0,48.0,41.0,0.025865851467520243,0.03985366485366485,1,135,member family ''Batanesi'',,arrested,member,Batanesi,1.0,14,5,5,2
+N89,11,46.0,46.0,46.0,0.02481523034504849,0.019716394716394716,1,135,member family ''Batanesi'',,arrested,member,Batanesi,1.0,11,3,2,2
+N11,15,34.0,34.0,30.0,0.02381423954628406,0.03392094017094017,1,135,boss Cosa Nostra in Messina,,,boss Cosa Nostra in Messina,Unknown,0.0,15,10,12,5
+N48,12,31.0,35.0,31.0,0.019624620447418445,0.004354441854441855,1,135,member family ''Batanesi'',,arrested,member,Batanesi,1.0,12,4,3,2
+N51,11,35.0,37.0,35.0,0.019290011410001022,0.02156177156177156,1,135,member family ''Batanesi'',,arrested,member,Batanesi,1.0,11,0,0,2
+N25,13,25.0,24.0,25.0,0.018661030032102593,0.04869123931623935,1,135,executive family ''Mistretta'',,arrested,executive,Mistretta,1.0,13,8,7,3
+N50,8,29.0,28.0,29.0,0.015481250032212764,0.00016996891996891997,1,135,member family ''Batanesi'',,arrested,member,Batanesi,1.0,8,2,0,2
+N43,9,28.0,27.0,26.0,0.01530437386259523,0.09277874902874902,1,135,intermediator,,arrested,intermediator,Unknown,1.0,9,1,6,1
+N19,11,19.0,18.0,17.0,0.014926950164839841,0.023115773115773116,1,135,,external partnership,arrested,,,1.0,11,5,3,0
+N36,10,19.0,18.0,16.0,0.01442792691540395,0.09697940947940947,1,135,,aiding and abetting of a fugitive,arrested,,,1.0,10,4,7,0
+N70,7,27.0,23.0,26.0,0.01319802645385017,0.0,1,135,member family ''Batanesi'',,arrested,member,Batanesi,1.0,7,1,2,2
+N76,7,18.0,18.0,18.0,0.012394305253450122,0.00019425019425019425,1,135,enterpreneur,external partnership,arrested,enterpreneur,Unknown,1.0,7,2,5,1
+N23,9,17.0,17.0,12.0,0.011640060052581875,0.015989219114219116,1,135,executive family,,arrested,executive,Unknown,1.0,9,4,6,3
+N64,7,17.0,18.0,14.0,0.01080392084817713,0.011363636363636364,1,135,enterpreneur,,arrested,enterpreneur,Unknown,1.0,7,0,4,1
+N5,10,11.0,11.0,11.0,0.010151420431380311,0.016886816886816883,1,135,,sighted with 11 12 and 13,,,,0.0,10,8,3,0
+N6,10,11.0,11.0,11.0,0.010151420431380311,0.016886816886816883,1,135,,sighted with 3 4 5 7 and 8,,,,0.0,10,8,3,0
+N93,5,17.0,17.0,17.0,0.0096221573086339,0.0,1,135,,sighted with various members of families,,,,0.0,5,1,5,0
+N34,6,9.0,12.0,9.0,0.009493901098760924,1.214063714063714e-05,1,135,,tapped with 18,,,,0.0,6,2,2,0
+N13,6,12.0,12.0,12.0,0.009128389265713932,0.0,1,135,enterpreneur,nephew of 11,,enterpreneur,Unknown,0.0,6,3,3,1
+N66,3,7.0,8.0,6.0,0.00877455529118059,0.0006798756798756799,1,135,enterpreneur,,arrested,enterpreneur,Unknown,1.0,3,0,3,1
+N0,2,2.0,2.0,2.0,0.008663423896306971,0.0,2,3,cooperating witness,,,cooperating witness,Unknown,0.0,2,2,2,1
+N1,2,2.0,2.0,2.0,0.008663423896306971,0.0,2,3,,conversation with 0,,,,0.0,2,2,1,0
+N2,2,2.0,2.0,2.0,0.008663423896306971,0.0,2,3,boss family ''Barcellona Pozzo di Gotto'',,,boss,Barcellona Pozzo di Gotto,0.0,2,2,1,5
+N16,1,1.0,1.0,1.0,0.008663423896306971,0.0,3,2,boss family ''Brancaccio'',,,boss,Brancaccio,0.0,1,1,1,5
+N17,1,1.0,1.0,1.0,0.008663423896306971,0.0,3,2,,tapped with 16,,,,0.0,1,1,1,0
+N73,1,1.0,1.0,1.0,0.008663423896306971,0.0,4,2,,mother of 74 and wife of 22,,,,0.0,1,1,0,0
+N74,1,1.0,1.0,1.0,0.008663423896306971,0.0,4,2,,son of 22,,,,0.0,1,1,0,0
+N39,7,7.0,7.0,7.0,0.00861649824510286,0.02342333592333592,1,135,executive family ''Batanesi'',,,executive,Batanesi,0.0,7,3,3,3
+N85,8,9.0,9.0,9.0,0.008118504794106493,0.0,1,135,enterpreneur,external partnership,arrested,enterpreneur,Unknown,1.0,8,6,3,1
+N14,7,12.0,10.0,12.0,0.007960911325071532,0.005536130536130536,1,135,boss family ''Mazzaroti'',,arrest request denied,boss,Mazzaroti,0.0,7,4,3,5
+N3,8,8.0,8.0,8.0,0.007859021490494299,0.007455969955969955,1,135,boss family ''Caltagirone'',,,boss,Caltagirone,0.0,8,7,6,5
+N63,5,9.0,9.0,8.0,0.0075707984994068875,9.712509712509713e-05,1,135,enterpreneur,,arrested,enterpreneur,Unknown,1.0,5,1,1,1
+N67,1,1.0,6.0,1.0,0.007148538161972562,0.0,1,135,enterpreneur,,arrested,enterpreneur,Unknown,1.0,1,0,1,1
+N79,5,5.0,5.0,5.0,0.007128565119601091,0.0101010101010101,1,135,enterpreneur,external partnership,,enterpreneur,Unknown,0.0,5,3,4,1
+N4,6,6.0,6.0,6.0,0.006447727941103838,0.0,1,135,enterpreneur,,,enterpreneur,Unknown,0.0,6,6,6,1
+N7,6,6.0,6.0,6.0,0.006447727941103838,0.0,1,135,,sighted with 3 4 5 6 7 and 8,,,,0.0,6,6,1,0
+N8,6,6.0,6.0,6.0,0.006447727941103838,0.0,1,135,,sighted with 3 4 5 6 and 7,,,,0.0,6,6,1,0
+N9,6,6.0,6.0,6.0,0.006447727941103838,0.0,1,135,,sighted with 3 5 6 7 4 and 8,,,,0.0,6,6,1,0
+N54,7,15.0,10.0,14.0,0.006417053647776332,0.0,1,135,enterpreneur,,arrested,enterpreneur,Unknown,1.0,7,1,5,1
+N80,4,5.0,4.0,5.0,0.00632999869228491,0.01150932400932401,1,135,enterpreneur,,arrested,enterpreneur,Unknown,1.0,4,3,3,1
+N40,4,4.0,4.0,3.0,0.006112546250625124,0.002946127946127946,1,135,member family ''Mazzaroti'',,,member,Mazzaroti,0.0,4,3,3,2
+N41,3,3.0,3.0,3.0,0.005694726996018898,0.0,1,135,member family ''Mazzaroti'',,,member,Mazzaroti,0.0,3,3,2,2
+N42,3,3.0,3.0,3.0,0.005694726996018897,0.0,1,135,boss family ''Tortorici'',,,boss,Tortorici,0.0,3,3,3,5
+N49,5,7.0,7.0,5.0,0.005618606377342803,0.010392385392385392,1,135,member family ''Batanesi'',,house arrest,member,Batanesi,1.0,5,2,1,2
+N33,4,9.0,5.0,9.0,0.0052510853475195175,4.856254856254856e-05,1,135,,external partnership,arrested,,,1.0,4,2,2,0
+N128,1,2.0,4.0,2.0,0.005200097963669077,0.0,1,135,enterpreneur,,arrested,enterpreneur,Unknown,1.0,1,0,1,1
+N35,5,5.0,5.0,5.0,0.005057281342566357,0.0,1,135,,,,,,,5,1,4,0
+N81,3,3.0,3.0,3.0,0.005012004627636952,0.0,1,135,,sighted with 80 and 82,,,,0.0,3,2,0,0
+N82,3,3.0,3.0,3.0,0.005012004627636952,0.0,1,135,,sighted with 80 and 81,,,,0.0,3,2,0,0
+N28,5,5.0,5.0,5.0,0.004839607275744119,0.0,1,135,,sighted with 11 13 and 5,,,,0.0,5,3,2,0
+N84,4,4.0,4.0,4.0,0.004744661609808434,0.0,1,135,enterpreneur,external partnership,,enterpreneur,Unknown,0.0,4,2,1,1
+N86,4,4.0,4.0,4.0,0.004744661609808434,0.0,1,135,enterpreneur,sighted with 87,,enterpreneur,Unknown,0.0,4,2,1,1
+N87,4,4.0,4.0,4.0,0.004744661609808434,0.0,1,135,enterpreneur,sighted with 85,,enterpreneur,Unknown,0.0,4,2,1,1
+N77,6,11.0,6.0,11.0,0.004582672272156011,0.007867132867132868,1,135,member family ''Mistretta'',,arrested,member,Mistretta,1.0,6,3,0,2
+N10,5,5.0,5.0,5.0,0.00443555900188527,0.0,1,135,enterpreneur,,,enterpreneur,Unknown,0.0,5,3,3,1
+N100,4,9.0,4.0,9.0,0.004310919865382456,0.0,1,135,farmer,external partnership,,farmer,Unknown,0.0,4,1,3,1
+N72,2,4.0,4.0,4.0,0.004227310463313443,0.0,1,135,construction worker,,lack of evidence,construction worker,Unknown,0.0,2,0,0,1
+N75,11,22.0,5.0,22.0,0.004093764644639191,0.027583527583527584,1,135,member family ''Mistretta'',,arrested,member,Mistretta,1.0,11,5,2,2
+N31,2,3.0,4.0,3.0,0.00392771250648648,0.0,1,135,enterpreneur,,,enterpreneur,Unknown,0.0,2,0,1,1
+N21,2,3.0,4.0,3.0,0.00391671361821614,0.0,1,135,enterpreneur,,arrested,enterpreneur,Unknown,1.0,2,0,2,1
+52,1,4.0,4.0,0.0,0.003910405687287243,0.0,1,135,,,,,,,1,0,1,0
+N97,4,6.0,5.0,5.0,0.003739554126871731,0.0,1,135,member family ''Batanesi'',,arrested,member,Batanesi,1.0,4,0,0,2
+N91,2,2.0,2.0,2.0,0.0035996925511276945,0.0,1,135,car electrician,in contact with 36,,car electrician,Unknown,0.0,2,1,1,1
+N92,2,2.0,2.0,2.0,0.0035996925511276945,0.0,1,135,lawyer,in contact with 91 and 36,,lawyer,Unknown,0.0,2,1,1,1
+N46,4,4.0,4.0,4.0,0.0035518080581682975,0.0,1,135,boss family ''Tortorici'',,,boss,Tortorici,0.0,4,0,4,5
+N56,4,5.0,2.0,4.0,0.0034399894439339452,0.01078088578088578,1,135,,wife of an inmate,arrest request denied,,,0.0,4,2,3,0
+N125,2,3.0,3.0,0.0,0.003337807810414815,0.0,1,135,member family ''Batanesi'',,,member,Batanesi,0.0,2,1,2,2
+N62,1,2.0,2.0,2.0,0.003251657765365591,0.0,1,135,enterpreneur,,arrested,enterpreneur,Unknown,1.0,1,0,1,1
+N105,1,2.0,2.0,0.0,0.003251657765365591,0.0,1,135,land owner,in contact with 37,,land owner,Unknown,0.0,1,0,1,1
+N95,4,4.0,4.0,3.0,0.003188485596354795,0.0,1,135,member family ''Batanesi'',,,member,Batanesi,0.0,4,1,1,2
+N71,2,2.0,3.0,2.0,0.003142702004486633,0.0,1,135,enterpreneur,,,enterpreneur,Unknown,0.0,2,0,1,1
+N83,2,2.0,2.0,2.0,0.003104159263430133,0.0,1,135,,sighted with 15 and 79,,,,0.0,2,1,1,0
+N52,3,4.0,3.0,4.0,0.0030810173823446214,0.005536130536130536,1,135,enterpreneur,,arrested,enterpreneur,Unknown,1.0,3,1,2,1
+N96,3,4.0,3.0,4.0,0.0030810173823446214,0.0,1,135,enterpreneur,,arrested,enterpreneur,Unknown,1.0,3,0,2,1
+N90,2,4.0,4.0,4.0,0.0030260628453545857,0.0,1,135,member family ''Batanesi'',,,member,Batanesi,0.0,2,0,0,2
+N69,4,6.0,4.0,4.0,0.002990033442312592,0.0,1,135,enterpreneur,,,enterpreneur,Unknown,0.0,4,0,3,1
+N139,2,2.0,3.0,1.0,0.002875364691016421,0.0,1,135,enterpreneur,,,enterpreneur,Unknown,0.0,2,0,0,1
+N20,2,2.0,2.0,2.0,0.00270137607430229,0.0,1,135,,,fugitive,,,0.0,2,0,1,0
+N59,2,2.0,2.0,2.0,0.002612580566907753,0.0,1,135,enterpreneur,,,enterpreneur,Unknown,0.0,2,0,1,1
+N60,2,2.0,2.0,2.0,0.002612580566907753,0.0,1,135,,brother of 59,,,,0.0,2,0,1,0
+N98,3,3.0,2.0,3.0,0.002546155405903863,0.0,1,135,,,arrest request denied,,,0.0,3,0,0,0
+N78,2,2.0,2.0,2.0,0.002546155405903863,0.0,1,135,,sighted with 22 and 18,,,,0.0,2,0,0,0
+N32,3,3.0,2.0,3.0,0.002545581797240259,0.0,1,135,member family ''Mistretta'',,,member,Mistretta,0.0,3,0,2,2
+N88,2,2.0,2.0,2.0,0.002545581797240259,0.0,1,135,,sighted with 25 and 26,,,,0.0,2,0,0,0
+N30,2,2.0,2.0,2.0,0.0024966739141634277,0.0,1,135,,father of 30,,,,0.0,2,0,0,0
+N26,2,2.0,2.0,2.0,0.0024418678035675904,0.0,1,135,member of family ''San Mauro Castelverde'',,,member of,San Mauro Castelverde,0.0,2,0,2,2
+N101,1,2.0,2.0,0.0,0.0024310500092092147,0.0,1,135,,phone tapped with 14,,,,0.0,1,1,1,0
+N107,1,1.0,1.0,0.0,0.002410948731124061,0.0,5,2,bar owner,phone tapped with 106,,bar owner,Unknown,0.0,1,1,1,1
+N94,2,2.0,2.0,2.0,0.002297896636846699,0.0,1,135,,sighted with 89 and 45,,,,0.0,2,0,2,0
+N130,1,1.0,1.0,0.0,0.002277437666213848,0.0,1,135,,phone tapped with 37,,,,0.0,1,0,1,0
+N55,2,2.0,2.0,2.0,0.0022471178025592455,0.0,1,135,member family ''Barcellona Pozzo di Gotto'',,,member,Barcellona Pozzo di Gotto,0.0,2,0,2,2
+N24,1,1.0,1.0,1.0,0.0021278319874208254,0.0,1,135,,external partnership,,,,0.0,1,0,0,0
+N143,2,3.0,1.0,3.0,0.002111331710883336,0.0,1,135,member family ''Mistretta'',,,member,Mistretta,0.0,2,2,0,2
+N112,1,5.0,5.0,0.0,0.0020941434996226867,0.0,1,135,,external partnership,,,,0.0,1,0,1,0
+N57,1,1.0,1.0,1.0,0.002034213750302246,0.0,1,135,,daughter of an inmate,uninvolved,,,0.0,1,1,0,0
+N114,2,3.0,3.0,0.0,0.0019737408317203426,0.0,1,135,road haulier,external partnership,,road haulier,Unknown,0.0,2,0,2,1
+N99,4,10.0,1.0,10.0,0.0019607835368514685,0.005536130536130536,1,135,,external partnership, arrested,,,1.0,4,1,1,0
+N124,1,1.0,1.0,0.0,0.0019579029275641575,0.0,1,135,,phone tapping with various members,,,,0.0,1,0,0,0
+N65,1,1.0,1.0,1.0,0.0019550145971183896,0.0,1,135,enterpreneur,,,enterpreneur,Unknown,0.0,1,0,1,1
+N132,1,1.0,1.0,0.0,0.0019550145971183896,0.0,1,135,,phone tapped with 18,,,,0.0,1,0,1,0
+N146,1,1.0,1.0,0.0,0.0019550145971183896,0.0,1,135,,phone tapped with 18,,,,0.0,1,0,1,0
+N144,2,2.0,1.0,2.0,0.0019014339439666307,0.0,1,135,member family ''Mistretta'',,,member,Mistretta,0.0,2,2,0,2
+N151,2,5.0,1.0,4.0,0.0018921417265758771,0.0,1,135,member family ''Batanesi'',,arrested,member,Batanesi,1.0,2,0,0,2
+N149,1,1.0,1.0,0.0,0.0018921417265758771,0.0,1,135,Co-founder of family ''Batanesi'',,in jail,Co-founder of,Batanesi,1.0,1,0,0,4
+N109,3,5.0,1.0,4.0,0.0018570831490930832,4.856254856254856e-05,1,135,on-existent enterpreneur created during a scam,,,on-existent enterpreneur created during a scam,Unknown,0.0,3,2,2,1
+N126,1,1.0,1.0,0.0,0.0018073306314729748,0.0,1,135,,sighted and phone tapped several times,,,,0.0,1,0,1,0
+N136,1,1.0,1.0,1.0,0.0018073306314729748,0.0,1,135,,common-law wife of 27,,,,0.0,1,0,1,0
+N118,1,3.0,3.0,0.0,0.0018032471447849262,0.0,1,135,,external partnership,,,,0.0,1,0,0,0
+N113,1,3.0,3.0,0.0,0.0017777731265984538,0.0,1,135,,external partnership,,,,0.0,1,0,1,0
+N121,1,1.0,1.0,0.0,0.0017109270796494991,0.0,1,135,,nominee owner of the phone number used by 147,,,,0.0,1,0,1,0
+N123,1,1.0,1.0,0.0,0.0017109270796494991,0.0,1,135,,Common-law wife of 47,,,,0.0,1,0,1,0
+N111,1,1.0,1.0,0.0,0.001697851208202776,0.0,1,135,,phone tapping with 109,,,,0.0,1,1,0,0
+N137,1,1.0,1.0,0.0,0.0016573704586961102,0.0,1,135,enterpreneur,,,enterpreneur,Unknown,0.0,1,0,1,1
+N115,1,1.0,1.0,0.0,0.0014614027535742214,0.0,1,135,road haulier,external partnership,,road haulier,Unknown,0.0,1,0,1,1
+N116,1,1.0,1.0,0.0,0.0014614027535742214,0.0,1,135,accountant employee of 113,accountant employee of 113,,accountant employee of 113,Unknown,0.0,1,0,1,1
+N131,1,4.0,0.0,4.0,0.0013032175670621051,0.0,1,135,,phone tapped with 37,,,,0.0,1,0,1,0
+N110,2,2.0,0.0,2.0,0.0013032175670621051,0.0,1,135,,external partnership,,,,0.0,2,1,1,0
+N117,1,2.0,0.0,2.0,0.0013032175670621051,0.0,1,135,,phone tapping with 37,,,,0.0,1,0,1,0
+N145,1,2.0,0.0,2.0,0.0013032175670621051,0.0,1,135,,mother of 13,,,,0.0,1,1,0,0
+N102,1,1.0,0.0,1.0,0.0013032175670621051,0.0,1,135,,,arrest request denied,,,0.0,1,0,1,0
+N103,1,1.0,0.0,1.0,0.0013032175670621051,0.0,1,135,,phone tapping with 18,,,,0.0,1,0,1,0
+N104,1,1.0,0.0,1.0,0.0013032175670621051,0.0,1,135,enterpreneur,,,enterpreneur,Unknown,0.0,1,0,1,1
+N106,1,1.0,0.0,1.0,0.0013032175670621051,0.0,5,2,,phone tapping with 107,,,,0.0,1,1,0,0
+N108,1,1.0,0.0,1.0,0.0013032175670621051,0.0,1,135,walking fishmonger,phone tapped with 18,,walking fishmonger,Unknown,0.0,1,0,1,1
+N119,1,1.0,0.0,1.0,0.0013032175670621051,0.0,1,135,,nominee owner of the phone number used by 15,,,,0.0,1,0,1,0
+N127,1,1.0,0.0,1.0,0.0013032175670621051,0.0,1,135,,phone tapped with 37,,,,0.0,1,0,1,0
+N129,1,1.0,0.0,1.0,0.0013032175670621051,0.0,1,135,,phone tapped with 37,,,,0.0,1,0,1,0
+N133,1,1.0,0.0,1.0,0.0013032175670621051,0.0,1,135,City employee,phone tapped with 37,,City employee,Unknown,0.0,1,0,1,1
+N134,1,1.0,0.0,1.0,0.0013032175670621051,0.0,1,135,,phone tapped with 37,,,,0.0,1,0,1,0
+N138,1,1.0,0.0,1.0,0.0013032175670621051,0.0,1,135,lawyer,in contact with 27,,lawyer,Unknown,0.0,1,0,1,1
+N140,1,1.0,0.0,1.0,0.0013032175670621051,0.0,1,135,enterpreneur,,,enterpreneur,Unknown,0.0,1,0,1,1
+N147,1,1.0,0.0,1.0,0.0013032175670621051,0.0,1,135,,phone tapped with 44,,,,0.0,1,0,1,0
+N148,1,1.0,0.0,1.0,0.0013032175670621051,0.0,1,135,,wife of 149,,,,0.0,1,0,0,0
+N150,1,1.0,0.0,1.0,0.0013032175670621051,0.0,1,135,,,in jail,,,1.0,1,0,1,0
+N152,1,1.0,0.0,1.0,0.0013032175670621051,0.0,1,135,,phone tapped with 15,,,,0.0,1,0,1,0
+N153,1,1.0,0.0,1.0,0.0013032175670621051,0.0,1,135,,sells a car to 34,,,,0.0,1,0,1,0
+N154,0,0.0,0.0,0.0,0.0013032175670621051,0.0,6,1,,,arrest request denied,,,0.0,0,0,0,0
